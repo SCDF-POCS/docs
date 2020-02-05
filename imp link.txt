@@ -1,0 +1,37 @@
+rabbit install
+https://www.javainuse.com/misc/rabbitmq-hello-world
+
+rabbit mq 
+
+sbin/ rabbitmq-server start
+
+http://localhost:15672/#/
+
+
+
+
+https://www.e4developer.com/2018/01/28/setting-up-rabbitmq-with-spring-cloud-stream/
+
+https://stackoverflow.com/questions/49651126/deploying-dockerized-apps-on-spring-cloud-data-flow-server
+
+
+
+https://www.javainuse.com/spring/cloud-data-flow   -working IMPPPPP
+https://www.javainuse.com/spring/cloud-data-flow
+
+
+
+https://www.e4developer.com/2018/02/18/getting-started-with-spring-cloud-data-flow/
+
+
+https://zoltanaltfatter.com/2017/08/24/streaming-with-spring-cloud-data-flow/
+
+https://dzone.com/articles/spring-cloud-stream-with-kafka  NO
+
+
+HYPER-v
+
+https://www.howtogeek.com/103884/install-hyper-v-on-windows-server-2008-r2/
+
+
+https://www.callicoder.com/spring-boot-docker-example/   - imp docker

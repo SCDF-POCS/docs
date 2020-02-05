@@ -1,0 +1,153 @@
+
+
+docker build -t amazonsources3final -f ./Dockerfile.txt /home/bitnami/
+
+
+
+Final docker image :
+
+processor:
+sinkfinal
+sourcefinal
+processorfinal
+
+
+AWS s3:
+amazonsources3final
+amazonsinks3final
+
+
+
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+WORKDIR /
+ADD sink-0.0.1-SNAPSHOT.jar sink.jar
+ENV JAVA_OPTS=""
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /sink.jar" ]
+
+
+A756877
+
+
+
+
+docker
+
+sudo usermod -a -G docker $USER
+
+docker run hello-world
+
+
+path 11
+
+
+11
+
+
+docker build -t sourcedemo -f ./Dockerfile.txt /home/rsa-key-20190731
+docker build -t sinkdemo -f ./Dockerfile.txt /home/rsa-key-20190731
+
+docker build -t sinkfinal -f ./Dockerfile.txt /home/bitnami/
+docker build -t sourcfinal -f ./Dockerfile.txt /home/bitnami/
+docker build -t processorfinal -f ./Dockerfile.txt /home/bitnami/
+
+
+docker build -t processorjdbc -f ./Dockerfile.txt /home/bitnami/
+
+
+
+docker build -t sinkawsjdbc -f ./Dockerfile.txt /home/bitnami/
+docker build -t sourceawsjdbc -f ./Dockerfile.txt /home/bitnami/
+docker build -t processorawsjdbc -f ./Dockerfile.txt /home/bitnami/
+
+docker build -t sinkjdbc -f ./Dockerfile.txt /home/bitnami/
+docker build -t sourcejdbcm -f ./Dockerfile.txt /home/bitnami/
+
+docker build -t sources3final -f ./Dockerfile.txt /home/bitnami/
+docker build -t sinks3final -f ./Dockerfile.txt /home/bitnami/
+
+docker build -t sources3done -f ./Dockerfile.txt /home/bitnami/
+docker build -t sinks3done -f ./Dockerfile.txt /home/bitnami/
+
+
+docker build -t amazonsources3final -f ./Dockerfile.txt /home/bitnami/
+docker build -t amazonsinks3final -f ./Dockerfile.txt /home/bitnami/
+
+
+docker build -t sourcefile -f ./Dockerfile.txt /home/bitnami/
+docker build -t sinkfile -f ./Dockerfile.txt /home/bitnami/
+
+docker build -t processor -f ./Dockerfile.txt /home/bitnami/
+
+docker build -t sink-f ./Dockerfile.txt /home/bitnami/
+
+
+docker images
+
+docker tag imageid reposirtoy/image:latest
+
+docker push reposirtoy/image:latest
+
+docker run reposirtoy/image:latest
+
+
+
+List:
+
+docker images -a
+
+Remove:
+
+docker rmi Image Image
+
+
+
+
+
+
+
+FROM java:8
+WORKDIR /
+ADD  sink-0.0.1-SNAPSHOT.jar sink.jar
+EXPOSE 8082
+CMD   ["java", "-jar", "/sink.jar"]
+
+
+docker history --no-trunc kamanakanjani/source  | tac | tr -s ' ' | cut -d " " -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\n  & ,g' | sed 's,\s*[0-9]*[\.]*[0-9]*[kMG]*B\s*$,,g' | head -n -1
+
+docker history --no-trunc springcloudstream/log-sink-kafka| tac | tr -s ' ' | cut -d " " -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\n  & ,g' | sed 's,\s*[0-9]*[\.]*[0-9]*[kMG]*B\s*$,,g' | head -n -1
+
+docker history --no-trunc kamanakanjani/sink  | tac | tr -s ' ' | cut -d " " -f 5- | sed 's,^/bin/sh -c #(nop) ,,g' | sed 's,^/bin/sh -c,RUN,g' | sed 's, && ,\n  & ,g' | sed 's,\s*[0-9]*[\.]*[0-9]*[kMG]*B\s*$,,g' | head -n -1
+
+
+
+springcloudstream/log-sink-rabbit  
+
+
+docker pull kamanakanjani/sink alias sink="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm kamanakanjani/sink" sink 6cc6eccc0f1b
+
+
+
+
+s
+
+   Logs will be in C:\Users\KK5060~1\AppData\Local\Temp\1\spring-cloud-dataflow-7882862866321569042\logd-1560412759826\logd.source
+
+
+
+
+
+*/
+	/*@Bean
+	public TaskExecutor threadPoolTaskExecutor() {
+	    ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+	    executor.setMaxPoolSize(1);
+	    executor.setThreadNamePrefix("single_thread_task_executor");
+	    executor.initialize();
+	    return executor;
+	}*/
+	
+	
+	
+	
+	   Logs will be in C:\Users\SYNTEL~1\AppData\Local\Temp\2\spring-cloud-dataflow-2865914023389920432\withprocessor4-1562751938397\withprocessor4.sink-file2

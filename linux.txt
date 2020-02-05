@@ -1,0 +1,54 @@
+Hi Kamana,
+
+Follow below steps to login to Ubuntu system:
+1) Open PUTTY
+2) Add host: "35.193.208.44"   35.222.14.239 
+3) In Putty go to Connection->SSH->Auth menu in left pane.
+     Browse and add the .ppk file (attached in this mail) to "Private key file for authentication".
+4) Click Open button
+5) When prompted for username put  "bitnami"
+6) For passphrase put - "syntel123"
+
+rm -rf - to delete directory
+
+
+vim 
+ESC  :q
+:q!
+:wq
+ insert
+
+
+cat > file.txt   ctrl+d
+
+
+app register --name processor-app --type processor --uri maven://org.springframework.cloud.stream.app.s3.processor:spring-cloud-starter-stream-processor-s3:jar:0.0.1-SNAPSHOT
+
+app register --name sink-app --type sink --uri maven://org.springframework.cloud.stream.app.s3.sink:spring-cloud-starter-stream-sink-s3:jar:0.0.1-SNAPSHOT
+
+app register --name source-app1 --type source --uri maven://org.springframework.cloud.stream.app.s3.source:spring-cloud-starter-stream-source-s3:jar:0.0.1-SNAPSHOT
+
+
+app register --name sink-app --type sink --uri maven://com.pivotal:scdf-sink:jar:0.0.1-SNAPSHOT
+
+app register --name source-app --type source --uri maven://com.pivotal:scdf-source:jar:0.0.1-SNAPSHOT
+app register --name sink-app --type sink --uri maven://com.pivotal:scdf-sink:jar:0.0.1-SNAPSHOT
+
+stream create --name donedata --definition 'source-app1 | processor-app | sink-app'
+
+.
+   Logs will be in C:\Users\KK5060~1\AppData\Local\Temp\1\spring-cloud-dataflow-7882862866321569042\log-data-1560408895803\log-data.sink-app
+
+
+
+app register --name source --type source --uri maven://com.javainuse:sourcenew:jar:0.0.1-SNAPSHOT
+app register --name sink --type sink --uri maven://com.javainuse:sink:jar:0.0.1-SNAPSHOT
+app register --name processor --type sink --uri maven://com.javainuse:processor:jar:0.0.1-SNAPSHOT
+
+
+stream create --name  logd --definition 'source | processor | sink'
+
+stream deploy --name logd
+
+
+C:\Users\kk5060572\AppData\Local\Temp\1\spring-cloud-dataflow-8224886792308289101

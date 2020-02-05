@@ -1,0 +1,40 @@
+
+
+open git bash on folder you want to add
+
+1) git init
+
+2) git add .
+
+3) git commit -m "Add all my files"
+
+4)  git remote add origin  https://github.com/SCDF-POCS/redhat.git
+
+
+5) git push origin master
+
+
+
+https://git.atosone.com/ganesh.shelar/stgurbandevelopment
+
+
+git remote add origin https://git.atosone.com/abhijit.roy/stgurbandevelopment.git
+
+
+git remote add origin https://git.atosone.com/kamana.kanjani/stgurbandevelopment.git
+
+
+
+
+git remote add origin  https://github.com/SCDF-POCS/redhat.git
+
+
+5) git push origin master
+
+git push https://A756877:Passaug12@git.atosone.com/kamana.kanjani/stgurbandevelopment.git --all
+
+
+A718656
+
+
+git config --local credential.helper ""

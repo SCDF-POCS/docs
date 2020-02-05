@@ -1,0 +1,5 @@
+FROM java:8
+WORKDIR /
+ADD  SpringBootRabbitMQHelloWorld-0.0.1-SNAPSHOT.jar  rabbitmqhello.jar
+EXPOSE 8082
+CMD   ["java", "-jar", "/rabbitmqhello.jar"]

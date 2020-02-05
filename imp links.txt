@@ -1,0 +1,73 @@
+C:\Users\kk5060572\AppData\Local\Temp\1\spring-cloud-dataflow-4744422438597232417\log-data-1560171106316\log-data.sink-app
+
+
+http://www.postgresqltutorial.com/install-postgresql/
+\l - to list database 
+create database name
+\dt  - to list table
+
+TABLE mytablename; - to see table data 
+
+
+https://github.com/spring-cloud-stream-app-starters
+
+https://gist.github.com/trisberg/39eb9c6346cd3cd7d7c0616e152e141f#file-uppercase-notes-adoc
+
+https://docs.spring.io/spring-cloud-dataflow/docs/current/reference/htmlsingle/
+
+
+https://console.cloud.google.com/storage/browser/springclouddataflowbucket
+
+dataflow:>app register --name mysource --type source --uri  https://console.cloud.google.com/storage/browser/springclouddataflowbucket/source-0.0.1-SNAPSHOT.jar	
+dataflow:>app register --name myprocessor --type processor --uri  https://console.cloud.google.com/storage/browser/springclouddataflowbucket/processor-0.0.1-SNAPSHOT.jar
+dataflow:>app register --name mysink --type sink --uri  https://console.cloud.google.com/storage/browser/springclouddataflowbucket/sink-0.0.1-SNAPSHOT.jar
+
+
+  https://storage.cloud.google.com/springclouddataflowbucket/source-0.0.1-SNAPSHOT.jar	
+
+stream create --name log-data1--definition 'source | processor | sink'
+
+stream deploy --name log-data1
+
+
+
+app register --name source --type source --uri https://storage.googleapis.com/springclouddataflowbucket/source-0.0.1-SNAPSHOT.jar
+app register --name processor --type processor --uri https://storage.googleapis.com/springclouddataflowbucket/processor-0.0.1-SNAPSHOT.jar
+app register --name sink --type sink --uri https://storage.googleapis.com/springclouddataflowbucket/sink-0.0.1-SNAPSHOT.jar
+
+https://storage.googleapis.com/springclouddataflowbucket/source-0.0.1-SNAPSHOT.jar
+
+stream create --name kafka-data --definition 'sourcekafka | processorkafka | sinkkafka'
+
+
+stream deploy --name kafka-data
+
+
+/tmp/spring-cloud-dataflow-4930725373824810869/log-data1-1560322251603/log-data1.sink
+
+
+
+/home/bitnami
+
+
+FROM java:8
+WORKDIR /home/bitnami
+ADD sink-0.0.1-SNAPSHOT.jar sink.jar
+EXPOSE 8080
+CMD java - jar sink.jar
+
+
+dataflow:>app register --name source-file1 --type source --uri maven://org.springframework.cloud.stream.app.s3.source:spring-cloud-starter-stream-source-s3:jar:
+0.0.1-SNAPSHOT
+
+
+dataflow:>app register --name source-jdbc --type source --uri maven://com.trial:sourcekafkajdbc:jar:0.0.1-SNAPSHOT
+dataflow:>app register --name sink-jdbc --type sink --uri maven://com.trial:sinkkafkajdbc:jar:0.0.1-SNAPSHOT
+
+dataflow:>stream create --name log-jdbc --definition 'source-jdbc |  sink-jdbc'
+
+
+stream deploy log-jdbc
+
+
+  C:\Users\SYNTEL~1\AppData\Local\Temp\2\spring-cloud-dataflow-2834432512673456948\log-jdbc-1568793486702\log-jdbc.source-jdbc

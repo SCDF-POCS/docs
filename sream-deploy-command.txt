@@ -1,0 +1,69 @@
+spring-cloud-starter-stream-source-file-0.0.1-SNAPSHOT.jar
+
+spring-cloud-starter-stream-sink-file-0.0.1-SNAPSHOT.jar
+
+
+
+app register --name source-file --type source --uri maven://org.springframework.cloud.stream.app.file.source:spring-cloud-starter-stream-source-file:jar:0.0.1-SNAPSHOT
+
+app register --name sink-file --type sink --uri maven://org.springframework.cloud.stream.app.file.sink:spring-cloud-starter-stream-sink-file:jar:0.0.1-SNAPSHOT
+
+
+stream create --name log-file --definition 'source-file |  sink-file'
+
+stream deploy --name log-file
+
+
+
+
+
+
+
+
+org.springframework.cloud.stream.app.s3.source
+
+
+org.springframework.cloud.stream.app.s3.sink
+
+
+spring-cloud-starter-stream-source-s3-0.0.1-SNAPSHOT.jar
+
+spring-cloud-starter-stream-sink-s3-0.0.1-SNAPSHOT.jar
+
+
+
+app register --name source-file --type source --uri maven://org.springframework.cloud.stream.app.s3.source:spring-cloud-starter-stream-source-s3:jar:0.0.1-SNAPSHOT
+
+app register --name sink-file --type sink --uri maven://org.springframework.cloud.stream.app.s3.sink:spring-cloud-starter-stream-sink-s3:jar:0.0.1-SNAPSHOT
+
+
+
+
+
+stream deploy --name log-file
+
+
+
+   Logs will be in C:\Users\SYNTEL~1\AppData\Local\Temp\2\spring-cloud-dataflow-3142528581413920616\log-file-1562579326858\log-file.sink-file
+   
+   
+   
+   app register --name source-app1 --type source --uri maven://com.java:source:jar:0.0.1-SNAPSHOT
+   app register --name processor-app1 --type processor --uri maven://com.java:processor:jar:0.0.1-SNAPSHOT
+   app register --name sink-app1 --type sink --uri maven://com.java:sink:jar:0.0.1-SNAPSHOT
+   
+   stream create --name withprocessor1 --definition 'source-app1 | processor-app1 |  sink-app1'
+   stream deploy --name withprocessor1
+   
+   
+   
+   
+    app register --name source-file --type source --uri maven://org.springframework.cloud.stream.app.file.source:spring-cloud-starter-stream-source-file:jar:0.0.1-SNAPSHOT
+  
+  app register --name sink-file --type sink --uri maven://org.springframework.cloud.stream.app.file.sink:spring-cloud-starter-stream-sink-file:jar:0.0.1-SNAPSHOT
+   
+  app register --name sink-file --type sink --uri maven://com.java:sink:jar:0.0.1-SNAPSHOT
+   
+   stream create --name withprocessor1 --definition 'source-app1  |  sink-app1'
+   stream deploy --name withprocessor1
+   
